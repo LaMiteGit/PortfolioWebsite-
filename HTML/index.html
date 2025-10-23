@@ -7,9 +7,11 @@
 </head>
 <body>
     <nav class="menu">
-        <ul>
-            <li><a href="#section-aboutme">About me</a></li>
-            <li><a href="#section-mygames">My Games</a></li>
+        <ul class="buttons">
+            <li class="homebutton"><a href="#">Home</a></li>
+            <li class="otherbutton"><a href="#section-aboutme">About me</a></li>
+            <li class="otherbutton"><a href="#section-mygames">My Games</a></li>
+            <li class="otherbutton"><a href="#section-contactme">Contact me</a></li>
         </ul>
     </nav>
     
@@ -18,6 +20,12 @@
         <img src="Images/pp.png" alt="Profile Picture">
         <p class="username">Mathlamite</p>
         <p>Third year <em>Gameplay Programmer Student.</em></p>    
+    </nav>
+
+    <nav class="contactme">
+        <h2 id="section-contactme">Contact me</h2>
+        <p>Email : mathieuperes0603@gmail</p>
+        <p>Mobile Phone : +33 7 68 89 64 56</p>
     </nav>
 
     <nav class="mygames">
@@ -49,9 +57,10 @@
     .aboutme {
         padding: 20px 0px;
     }
+
     .menu {
-        margin: 0px;
-        padding: 0px;
+        width: 100%;
+        position: fixed;
     }
     .menu ul {
         border: 1px solid black;
@@ -61,15 +70,25 @@
         background-color: rgb(255, 114, 114);
         margin: -10px;
     }
-    .menu li {
+
+    .buttons li{
         border: 1px solid black;
         border-radius: 5px;
         padding: 10px 20px;
         font-size: xx-large;
         background-color: rgb(255, 161, 161);
         margin: 0px 5px;
+    }
+    .buttons li a {
+        align-items: center;
+    }
+    .homebutton {
+        width: 25%;
+    }
+    .otherbutton{
         width: 100%;
     }
+
     .menu li a {
         color: black;
         text-align: center;
@@ -92,6 +111,7 @@
     }
     .aboutme {
         font-size: 15px;
+        padding-top: 60px; 
     }
     em {
         color: red;
