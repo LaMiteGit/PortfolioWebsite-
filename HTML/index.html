@@ -1,254 +1,147 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mathieu — Programmeur Gameplay</title>
-<meta name="description" content="Portfolio de Mathieu, programmeur gameplay Unity/C# — character controllers, IA de jeu, animation procédurale et audio.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathieu Peres</title>
 </head>
 <body>
-
-<!-- ============ HEADER / NAV ============ -->
-<header class="site-header">
-  <div class="header-inner">
-    <a href="#top" class="logo">Mathieu<span class="dot">.</span></a>
-
-    <nav class="main-nav" id="main-nav">
-      <a href="#apropos">À propos</a>
-      <a href="#projets">Projets</a>
-      <a href="#itch">Jeux</a>
-      <a href="#contact">Contact</a>
+    <nav class="menu">
+        <ul class="buttons">
+            <li class="homebutton"><a href="#">Home</a></li>
+            <li class="otherbutton"><a href="#section-aboutme">About me</a></li>
+            <li class="otherbutton"><a href="#section-mygames">My Games</a></li>
+            <li class="otherbutton"><a href="#section-contactme">Contact me</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="aboutme">
+        <h2 id="section-aboutme">Aboute me</h2>
+        <img src="Images/pp.png" alt="Profile Picture">
+        <p class="username">Mathlamite</p>
+        <p>Third year <em>Gameplay Programmer Student.</em></p>    
     </nav>
 
-    <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
+    <nav class="contactme">
+        <h2 id="section-contactme">Contact me</h2>
+        <p>Email : mathieuperes0603@gmail</p>
+        <p>Mobile Phone : +33 7 68 89 64 56</p>
+    </nav>
 
-<main id="top">
-
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <canvas id="hero-canvas" aria-hidden="true"></canvas>
-    <div class="hero-content">
-      <p class="hero-kicker">Programmeur gameplay — Unity / C#</p>
-      <h1 class="hero-title">Je construis des systèmes de jeu qui se sentent bien en main.</h1>
-      <p class="hero-lead">
-        Character controllers, IA de jeu, animation procédurale et intégration audio.
-        Je travaille sur les couches invisibles qui rendent un jeu agréable à jouer.
-      </p>
-      <div class="hero-actions">
-        <!-- TODO: remplace par ton lien itch.io -->
-        <a class="btn btn-primary" href="https://TON-PSEUDO.itch.io" target="_blank" rel="noopener">Voir mes jeux sur itch.io</a>
-        <a class="btn btn-ghost" href="#projets">Voir mes projets</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ À PROPOS ============ -->
-  <section class="section" id="apropos">
-    <div class="section-inner about-grid">
-      <div class="about-text">
-        <h2>À propos</h2>
-        <p>
-          Je suis programmeur gameplay, spécialisé dans les systèmes qui définissent la sensation
-          de jeu : contrôleurs de personnage, intelligence artificielle, animation procédurale
-          et son. Mon terrain de jeu, c'est Unity et C#.
-        </p>
-        <p>
-          Je m'intéresse particulièrement aux traversées rapides façon Titanfall / Mirror's Edge,
-          au combat fluide façon Arkham / Sifu, et à tout ce qui touche au comportement des
-          ennemis — de la simple charge à la prédiction de trajectoire.
-        </p>
-        <p>
-          <!-- TODO: ajuste selon ta situation actuelle (stage, dispo, etc.) -->
-          Actuellement à la recherche d'un poste / stage à partir d'octobre 2026.
-        </p>
-      </div>
-
-      <div class="about-skills">
-        <h3>Compétences</h3>
-        <ul class="skill-list">
-          <li><span>Langages</span>C#, HLSL (bases)</li>
-          <li><span>Moteur</span>Unity</li>
-          <li><span>Systèmes</span>Character controllers, physique de mouvement, IA de jeu</li>
-          <li><span>Animation</span>IK procédurale, locomotion, game feel</li>
-          <li><span>Audio</span>Intégration FMOD (3D, VCA, paramètres globaux)</li>
-          <li><span>Outils</span>Git / Git LFS, GitHub</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PROJETS DÉTAILLÉS ============ -->
-  <section class="section section-alt" id="projets">
-    <div class="section-inner">
-      <h2>Projets</h2>
-
-      <!-- PROJET 1 -->
-      <article class="project">
-        <div class="project-media">
-          <!-- TODO: remplace par un gif/screenshot du grapple swing -->
-          <img src="images/projet-grapple.jpg" alt="Capture du personnage en train de swing au grappin" loading="lazy">
-        </div>
-        <div class="project-body">
-          <p class="project-tag">Projet portfolio — en cours</p>
-          <h3>Grapple Swing & Character Controller</h3>
-          <p>
-            Un jeu de grappin construit sur un character controller maison : course, accroupi,
-            glisse dépendante de la pente. L'architecture physique repose sur une vélocité
-            persistante et une machine à états (Grounded / Airborne / Sliding), avec un calcul
-            cinématique de la hauteur de saut. L'objectif est de rendre l'intégration du grappin
-            aussi simple que possible une fois cette base posée.
-          </p>
-          <div class="project-tech">
-            <span>Unity</span><span>C#</span><span>Physique</span><span>State machine</span>
-          </div>
-          <div class="project-links">
-            <!-- TODO: liens réels -->
-            <a href="#" target="_blank" rel="noopener">GitHub</a>
-            <a href="#" target="_blank" rel="noopener">Jouer sur itch.io</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- PROJET 2 -->
-      <article class="project project-reverse">
-        <div class="project-media">
-          <img src="images/projet-guardians.jpg" alt="Capture de Guardian's Awakening" loading="lazy">
-        </div>
-        <div class="project-body">
-          <p class="project-tag">Projet d'école — 6 personnes</p>
-          <h3>Guardian's Awakening</h3>
-          <p>
-            Roguelite / dungeon crawler narratif réalisé en 3e année. J'y étais seul programmeur
-            gameplay : génération de donjon, système de minimap (rooms partageant l'origine du
-            monde via un RoomRegistry), et l'ensemble du code de jeu.
-          </p>
-          <div class="project-tech">
-            <span>Unity</span><span>C#</span><span>Génération procédurale</span>
-          </div>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noopener">Jouer sur itch.io</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- PROJET 3 -->
-      <article class="project">
-        <div class="project-media">
-          <img src="images/projet-ia-foot.jpg" alt="Visualisation de l'IA d'un bot de football" loading="lazy">
-        </div>
-        <div class="project-body">
-          <p class="project-tag">Recherche personnelle</p>
-          <h3>IA de bot — jeu de football</h3>
-          <p>
-            Exploration de plusieurs architectures d'IA pour un bot de football en Unity :
-            comportements de prise de décision, prédiction de trajectoire et simulation de
-            physique isolée pour anticiper les rebonds du ballon.
-          </p>
-          <div class="project-tech">
-            <span>Unity</span><span>C#</span><span>IA</span><span>Physics.Simulate</span>
-          </div>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- PROJET 4 -->
-      <article class="project project-reverse">
-        <div class="project-media">
-          <img src="images/projet-ik.jpg" alt="Système de locomotion IK sur un quadrupède" loading="lazy">
-        </div>
-        <div class="project-body">
-          <p class="project-tag">Recherche personnelle</p>
-          <h3>Locomotion procédurale — quadrupède</h3>
-          <p>
-            Système d'IK procédural pour la démarche d'un quadrupède, basé sur des
-            TwoBoneIKConstraint et des paires de pattes en diagonale. A demandé de résoudre le
-            calage au sol au démarrage, la cohérence des cycles départ/arrêt, et la
-            synchronisation des pas.
-          </p>
-          <div class="project-tech">
-            <span>Unity</span><span>Animation Rigging</span><span>IK</span>
-          </div>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- ============ JEUX ITCH.IO ============ -->
-  <section class="section" id="itch">
-    <div class="section-inner">
-      <h2>Jeux sur itch.io</h2>
-      <p class="section-lead">
-        Prototypes, game jams et petits projets solo — tout est jouable directement dans le navigateur.
-      </p>
-
-      <div class="itch-grid">
-        <!-- TODO: dupliquer ce bloc pour chaque jeu, remplacer image/titre/lien -->
-        <a class="itch-card" href="https://TON-PSEUDO.itch.io/jeu-1" target="_blank" rel="noopener">
-          <img src="images/itch-jeu-1.jpg" alt="" loading="lazy">
-          <div class="itch-card-body">
-            <h3>Nom du jeu</h3>
-            <p>Une phrase pour décrire le jeu et son mécanisme central.</p>
-          </div>
-        </a>
-
-        <a class="itch-card" href="https://TON-PSEUDO.itch.io/jeu-2" target="_blank" rel="noopener">
-          <img src="images/itch-jeu-2.jpg" alt="" loading="lazy">
-          <div class="itch-card-body">
-            <h3>Nom du jeu</h3>
-            <p>Une phrase pour décrire le jeu et son mécanisme central.</p>
-          </div>
-        </a>
-
-        <a class="itch-card" href="https://TON-PSEUDO.itch.io/jeu-3" target="_blank" rel="noopener">
-          <img src="images/itch-jeu-3.jpg" alt="" loading="lazy">
-          <div class="itch-card-body">
-            <h3>Nom du jeu</h3>
-            <p>Une phrase pour décrire le jeu et son mécanisme central.</p>
-          </div>
-        </a>
-      </div>
-
-      <a class="btn btn-ghost itch-see-all" href="https://TON-PSEUDO.itch.io" target="_blank" rel="noopener">
-        Voir tous mes jeux sur itch.io →
-      </a>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section class="section section-alt" id="contact">
-    <div class="section-inner contact-inner">
-      <h2>Contact</h2>
-      <p class="section-lead">Ouvert aux opportunités de stage / poste à partir d'octobre 2026.</p>
-      <div class="contact-links">
-        <!-- TODO: remplace par tes vraies infos -->
-        <a href="mailto:ton.email@example.com">ton.email@example.com</a>
-        <a href="https://linkedin.com/in/ton-profil" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/ton-pseudo" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://TON-PSEUDO.itch.io" target="_blank" rel="noopener">itch.io</a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <p>&copy; <span id="year"></span> Mathieu — Programmeur Gameplay</p>
-</footer>
-
-<script src="script.js"></script>
+    <nav class="mygames">
+        <h2 id="section-mygames">My Games</h2>
+        <ol>
+            <ul>
+                <li>
+                    <img src="Images/Twice.png" alt="Twice">
+                    <h3>Twice</h3>
+                    <p class="description">Asymetrical solo puzzle game</p>
+                </li>
+                <li>
+                    <img src="Images/Lunira.png" alt="Twice">
+                    <h3>Lunira</h3>
+                    <p class="description">Mobile endless runner riding  game</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <img src="Images/Encephale.png" alt="Encephale">
+                    <h3>Encephale</h3>
+                    <p class="description">Psychological horror game</p>
+                </li>
+            </ul>
+        </ol>
+    </nav>
 </body>
+<style>
+    .aboutme {
+        padding: 20px 0px;
+    }
+
+    .menu {
+        width: 100%;
+        position: fixed;
+    }
+    .menu ul {
+        border: 1px solid black;
+        list-style: none;
+        display: flex;
+        padding: 2px;
+        background-color: rgb(255, 114, 114);
+        margin: -10px;
+    }
+
+    .buttons li{
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: xx-large;
+        background-color: rgb(255, 161, 161);
+        margin: 0px 5px;
+    }
+    .buttons li a {
+        align-items: center;
+    }
+    .homebutton {
+        width: 25%;
+    }
+    .otherbutton{
+        width: 100%;
+    }
+
+    .menu li a {
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        width: 100%;  
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .aboutme img {
+        width: 100px;
+        border-radius: 50px;
+        float: left;
+        margin-right: 20px  ;
+    }
+    .username {
+        font-weight: bold; 
+        padding-top: 20px;
+    }
+    .aboutme {
+        font-size: 15px;
+        padding-top: 60px; 
+    }
+    em {
+        color: red;
+    }
+    h1 {
+        text-align: center;
+    }
+    .mygames ol {
+        display: flex;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .mygames ul {
+        padding: 0.5%;
+        width: 100%;
+    }
+    .mygames li {
+        border: 1px solid black;
+        list-style: none;
+        margin-bottom: 1%;
+    }
+    .mygames img {
+        width: 100%;
+    }
+    .mygames p {
+        padding-left: 2.5%;
+    }
+    .mygames h3 {
+        padding-left: 2.5%;
+        padding-bottom: 0%;
+    }
+</style>
 </html>
