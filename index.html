@@ -1,147 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathieu Peres</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programmeur Gameplay Mathieu </title>
+<meta name="description" content="Portfolio de Mathieu, programmeur gameplay Unity">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="menu">
-        <ul class="buttons">
-            <li class="homebutton"><a href="#">Home</a></li>
-            <li class="otherbutton"><a href="#section-aboutme">About me</a></li>
-            <li class="otherbutton"><a href="#section-mygames">My Games</a></li>
-            <li class="otherbutton"><a href="#section-contactme">Contact me</a></li>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="logo">Mathieu<span class="dot">.</span></a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#apropos">About Me</a>
+      <a href="#projets">Projects</a>
+      <a href="#itch">Games</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-kicker">Unity gameplay programmer</p>
+      <h1 class="hero-title">I want to create mechanics that make you want to use them.</h1>
+      <p class="hero-lead">
+        Character controllers, game AI, procedural animation and audio integration.
+        I work on the invisible layers that make a game enjoyable to play.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://lamite.itch.io/" target="_blank" rel="noopener">Play my games on itch.io</a>
+        <a class="btn btn-ghost" href="#projets">See my projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ À PROPOS ============ -->
+  <section class="section" id="apropos">
+    <div class="section-inner about-grid">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I am a gameplay programmer, specializing in systems that define the feel
+          game: character controllers, artificial intelligence, procedural animation
+          and sound. My playground is Unity and C#.
+        </p>
+        <p>
+          I am particularly interested in satisfactory systems:
+          fluid movements like Titanfall or Spider-Man, to fluid combat like Batman Arkham, etc.
+        </p>
+        <p>
+          Currently seeking a position.
+        </p>
+      </div>
+
+      <div class="about-skills">
+        <h3>Skills</h3>
+        <ul class="skill-list">
+          <li><span>Languages</span>C#</li>
+          <li><span>Engine</span>Unity</li>
+          <li><span>Systems</span>Character controllers, physics, bot's IA</li>
+          <li><span>Audio</span>FMOD integration </li>
+          <li><span>Tools</span>GitHub, JetBrain Rider</li>
         </ul>
-    </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJETS DÉTAILLÉS ============ -->
+  <section class="section" id="projets">
+    <div class="section-inner">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <!--<div class="project-title-row">
+          <h3>TPS football game bot's behaviour</h3>
+        </div>-->
+        <div class="project-showcase">
+          <div class="project-body">
+            <!--<p class="project-tag">Projet portfolio - en cours</p>-->
+            <h3>TPS football game bot's behaviour</h3>
+            <p>
+              Complex bot's behaviour for a TPS Football PVP Competitive Game 
+            </p>
+            <a class="btn btn-ghost" href="https://store.steampowered.com/app/3871040/BallShot_Arena/" target="_blank" rel="noopener">The game on steam</a>
+            <div class="project-tech">
+              <span>Bot's IA</span><span>Behaviour tree</span>
+            </div>
+            <!--<div class="project-links">
+              <a href="#" target="_blank" rel="noopener">GitHub</a>
+              <a href="#" target="_blank" rel="noopener">Jouer sur itch.io</a>
+            </div>-->
+          </div>
+          <div class="project-media">
+            <img src="images/BallShotArena.png" alt="Image not foung" loading="lazy">
+          </div>
+        </div>
+        <button class="project-expand" aria-expanded="false">
+          <span class="chevron" aria-hidden="true"></span>
+          <span class="label-more">See more</span>
+          <span class="label-less">See less</span>
+        </button>
+        <div class="project-detail">
+          <div class="project-detail-inner">
+            <article class="project">
+              
+              <div class="project-detail-showcase-header">
+                <div class="project-body">
+                  <h4>Mission :</h4>
+                  <p>
+                    Make bot behaviour that look human and can teach gameplay mechanics to players by using them during games.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="project-detail-showcase-left">
+                <img src="images/GuardiansAwakening_Image_001.png" alt="Image not foung" loading="lazy">
+                <div class="project-body">
+                  <h4>Arriving on the project</h4>
+                  <p>
+                    As a new member of the project i needed to set foot in systems i didn't know about.
+                  </p>
+                  <p>
+                    So the first step was to take the current bot's behavior, cut it in pieces to understand what the last GPP left behind.
+                  </p>
+                  <h4>Then it was time for prototyping </h4>
+                  <p>
+                    First i tried to recreate the bot from start using the current system and adapting it using my skills
+                  </p>
+                  <p>
+                    Then step by step i was adding more complexity to his behavior with new moves that the old bot couldn't use.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="project-detail-showcase-right">
+                
+                <div>
+                  <h4>Ball's prediction</h4>
+                  <p>
+                    The bot needed a prediction system to know where the ball will be at any time in space.
+                  </p>
+                  <p>
+                    First i made a system that predicted ball positions by calculating gravity, bounces, etc. but the approximations of complex calculations made it too uncertain if the prediction was too long.
+                  </p>
+                  <p>
+                    I then replaced that system by a physics based one.
+                  </p>
+                  <p>
+                    By duplicating every gameplay important collider in an async scene at the start of the game. And every time anyone needs to know future ball positions he can ask that scene to predict, the scene then takes currents ball's infos (linear velocity, angular velocity, position, etc...) and simulates for the asked amount of frame.
+                  </p>
+                  <p>
+                    I made this system directly in our Physics Utils so anyone might use it.
+                  </p>
+                  <p>
+                    Altrough this system is way more accurate than the previous one, it can rapidly cost too much performance especially in multiplayer games. So it needed some optimisation, i reduced at minimum the amount of time it was used and sliced the prediction to several frames to relieve the server from doing too many steps per frame.
+                  </p>
+                  <p>
+                    With this all done i had a pretty good roster of tools to make an interesting bot's behaviour
+                  </p>
+                </div>
+                
+                <img src="images/GuardiansAwakening_Image_001.png" alt="Image not foung" loading="lazy">
+                
+              </div>
+
+              <div class="project-detail-showcase-left">
+                <img src="images/GuardiansAwakening_Image_001.png" alt="Image not foung" loading="lazy">
+                <div class="project-body">
+                  <h4>R&D</h4>
+                  <p>
+                    The more i wanted to add things to the bot the more i saw the limitations of the current system, so it was the right time to start making some research on bot's behavior.
+                  </p>
+                  <p>
+                    With some research, i found behaviour tree being the right tool to make what i wanted
+                  </p>
+                  <p>
+                    So we added Unity Behavior to the project and now the new step was ...
+                  </p>
+                  
+                  <h4>Learning behaviour trees</h4>
+                  <p>
+                    The first step was to remake what i have done before but entirely with behaviour trees.
+                  </p>
+                  <p>
+                    For that i needed to create several custom nodes for all actions the bot could make, and also needed flow nodes to make him take decisions.
+                  </p>
+                  <p>
+                    After i finished remaking the behaviour with the trees i had a good pipeline installed, i can now iterate faster without any limitation.
+                  </p>
+                  <p>
+                    So i started the last step ...
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-detail-showcase-right">
+                <div class="project-body">
+                  <h4>Sequences</h4>
+                  <p>
+                    I have a bot who has pretty good placement, strategy over attack and defending state all over the game but now i want him to use special tactics at the right point in time that players can learn from.
+                  </p>
+                  <p>
+                    Those tactits differ from base behavior cause when started the base behaviour is stopped to let place to the current tactic.
+                  </p>
+                  <p>
+                    For that i made action nodes that take time and run actions one after another until they all succeed or any fails.
+                  </p>
+                </div>
+                <img src="images/GuardiansAwakening_Image_001.png" alt="Image not foung" loading="lazy">
+              </div>
+              
+            </article>
+          </div>
     
-    <nav class="aboutme">
-        <h2 id="section-aboutme">Aboute me</h2>
-        <img src="Images/pp.png" alt="Profile Picture">
-        <p class="username">Mathlamite</p>
-        <p>Third year <em>Gameplay Programmer Student.</em></p>    
-    </nav>
+      
+      <!-- PROJET 3 
+      <article class="project">
+        <div class="project-media">
+          <img src="images/BallShotArena_Image_001.png" alt="Image not found" loading="lazy">
+        </div>
+        <div class="project-body">
+          <p class="project-tag">Recherche personnelle</p>
+          <h3>IA de bot — jeu de football</h3>
+          <p>
+            Exploration de plusieurs architectures d'IA pour un bot de football en Unity :
+            comportements de prise de décision, prédiction de trajectoire et simulation de
+            physique isolée pour anticiper les rebonds du ballon.
+          </p>
+          <div class="project-tech">
+            <span>Unity</span><span>IA</span><span>Stratégie</span>
+          </div>
+        </div>
+      </article>
+      
+       
+      <article class="project project-reverse">
+        <div class="project-media">
+          <img src="images/GuardiansAwakening_Image_001.png" alt="Image not found" loading="lazy">
+        </div>
+        <div class="project-body">
+          <p class="project-tag">Projet d'école — 6 personnes</p>
+          <h3>Guardian's Awakening</h3>
+          <p>
+            Roguelite / dungeon crawler narratif réalisé en 3e année. J'y étais seul programmeur
+            gameplay : plus de 20 compétences différentes interchangeables, combat de boss, génération de donjon, système de minimap, et l'ensemble du code de jeu.
+          </p>
+          <div class="project-tech">
+            <span>Système polyvalents</span><span>Génération procédurale</span><span>Combat de boss</span>
+          </div>
+          <div class="project-links">
+            <a href="https://lamite.itch.io/guardians-awakening" target="_blank" rel="noopener">Jouer sur itch.io</a>
+          </div>
+        </div>
+      </article>-->
+      
+        </div>
+      </article>
+    </div>
+  </section>
 
-    <nav class="contactme">
-        <h2 id="section-contactme">Contact me</h2>
-        <p>Email : mathieuperes0603@gmail</p>
-        <p>Mobile Phone : +33 7 68 89 64 56</p>
-    </nav>
+  <!-- ============ JEUX ITCH.IO ============ -->
+  <section class="section" id="itch">
+    <div class="section-inner">
+      <h2>Games on itch.io</h2>
 
-    <nav class="mygames">
-        <h2 id="section-mygames">My Games</h2>
-        <ol>
-            <ul>
-                <li>
-                    <img src="Images/Twice.png" alt="Twice">
-                    <h3>Twice</h3>
-                    <p class="description">Asymetrical solo puzzle game</p>
-                </li>
-                <li>
-                    <img src="Images/Lunira.png" alt="Twice">
-                    <h3>Lunira</h3>
-                    <p class="description">Mobile endless runner riding  game</p>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="Images/Encephale.png" alt="Encephale">
-                    <h3>Encephale</h3>
-                    <p class="description">Psychological horror game</p>
-                </li>
-            </ul>
-        </ol>
-    </nav>
+      <div class="itch-grid">
+        <a class="itch-card" href="https://lamite.itch.io/guardians-awakening" target="_blank" rel="noopener">
+          <img src="images/Cover_GuardiansAwakening.png" alt="" loading="lazy">
+          <div class="itch-card-body">
+            <h3>Guardian's Awakening</h3>
+            <p>Narrative, RogueLite, Dungeon Crawler </p>
+          </div>
+        </a>
+
+        <a class="itch-card" href="https://lisaabordeaux.itch.io/encephale" target="_blank" rel="noopener">
+          <img src="images/Cover_Encephale_16.9.png" alt="" loading="lazy">
+          <div class="itch-card-body">
+            <h3>Encephale</h3>
+            <p>Atmospheric, Horror, First Person </p>
+          </div>
+        </a>
+
+        <a class="itch-card" href="https://lamite.itch.io/twice" target="_blank" rel="noopener">
+          <img src="images/Cover_Twice_16.9.png" alt="" loading="lazy">
+          <div class="itch-card-body">
+            <h3>Twice</h3>
+            <p>Puzzle, Platformer, 2D</p>
+          </div>
+        </a>
+      </div>
+
+      <a class="btn btn-ghost itch-see-all" href="https://lamite.itch.io/" target="_blank" rel="noopener">
+        See all my game on itch.io →
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section-alt" id="contact">
+    <div class="section-inner contact-inner">
+      <h3>More about me</h3>
+      <p class="section-lead">Open to job/internship opportunities.
+      <div class="contact-links">
+        <a href="mailto:mathieuperes0603@gmail.com">mathieuperes0603@gmail.com</a>
+        <a href="https://www.linkedin.com/in/mathieu-peres/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://lamite.itch.io/" target="_blank" rel="noopener">itch.io</a>
+      </div>
+
+      <p>&copy; <span id="year"></span> Mathieu - Gameplay Programmer</p>
+    </div>
+  </section>
+
+</main>
+
+
+<script src="script.js"></script>
 </body>
-<style>
-    .aboutme {
-        padding: 20px 0px;
-    }
-
-    .menu {
-        width: 100%;
-        position: fixed;
-    }
-    .menu ul {
-        border: 1px solid black;
-        list-style: none;
-        display: flex;
-        padding: 2px;
-        background-color: rgb(255, 114, 114);
-        margin: -10px;
-    }
-
-    .buttons li{
-        border: 1px solid black;
-        border-radius: 5px;
-        padding: 10px 20px;
-        font-size: xx-large;
-        background-color: rgb(255, 161, 161);
-        margin: 0px 5px;
-    }
-    .buttons li a {
-        align-items: center;
-    }
-    .homebutton {
-        width: 25%;
-    }
-    .otherbutton{
-        width: 100%;
-    }
-
-    .menu li a {
-        color: black;
-        text-align: center;
-        text-decoration: none;
-        display: block;
-        width: 100%;  
-        height: 100%;
-        box-sizing: border-box;
-    }
-
-    .aboutme img {
-        width: 100px;
-        border-radius: 50px;
-        float: left;
-        margin-right: 20px  ;
-    }
-    .username {
-        font-weight: bold; 
-        padding-top: 20px;
-    }
-    .aboutme {
-        font-size: 15px;
-        padding-top: 60px; 
-    }
-    em {
-        color: red;
-    }
-    h1 {
-        text-align: center;
-    }
-    .mygames ol {
-        display: flex;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-    .mygames ul {
-        padding: 0.5%;
-        width: 100%;
-    }
-    .mygames li {
-        border: 1px solid black;
-        list-style: none;
-        margin-bottom: 1%;
-    }
-    .mygames img {
-        width: 100%;
-    }
-    .mygames p {
-        padding-left: 2.5%;
-    }
-    .mygames h3 {
-        padding-left: 2.5%;
-        padding-bottom: 0%;
-    }
-</style>
 </html>
