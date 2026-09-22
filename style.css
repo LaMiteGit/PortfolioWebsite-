@@ -170,7 +170,7 @@ img { max-width: 100%; display: block; }
   inset: 0;
   background-image:
           linear-gradient(180deg, transparent 70%, var(--bg) 100%),
-          url("images/Background.png");
+          url("lamitegit.github.io/PortfolioWebsite-/images/Background.png");
   background-size: cover;
   background-position: center;
 }
